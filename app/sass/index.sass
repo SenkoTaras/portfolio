@@ -1,0 +1,152 @@
+@import "bourbon"
+@import "_var"
+@import "_general"
+@import "_fonts"
+@import "_header"
+
+.container
+  max-width: 1140px
+  width: 100%
+  margin: 0 auto
+  padding-left: 10px
+  padding-right: 10px
+
+
+main
+  width: 100vw
+  height: 100vh
+  position: relative
+  top: 0px
+  left: 0px
+  z-index: 2
+  transition: 1.2s ease
+
+section
+  width: 100vw
+  min-height: 100vh
+  z-index: 3
+  position: relative
+
+
+/*Home start*/ 
+
+.home_wrapper
+  display: flex
+  flex-direction: column
+  .home_info
+    margin-top: 5rem
+    margin-bottom: 1rem
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: flex-end
+    flex-wrap: wrap
+    .home_info_bio
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-end
+    .home_info_lang
+      display: flex
+      flex-direction: column
+      .lang_link
+        transform: rotate(90deg)
+        height: 35px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #828282
+        transition: .3s ease-in-out
+        &:nth-child(2)
+          border-left: 1px solid $black
+      .active
+        color: $black
+        font-family: 'font_tittle', sans-serif
+      .lang_link:hover
+        color: $black
+        transition: .3s ease-in-out
+  .home_img
+    display: flex
+    align-items: center
+    justify-content: center
+    max-height: 75vh
+    width: 100%
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: 0 0
+
+/*Home end*/ 
+
+
+/*About me start*/ 
+
+.about
+  background-color: #F6F6F6
+    
+.about_wrapper
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  margin-top: 5rem
+  h2
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+
+#demo, #demo2
+  display: none
+
+#recruiter:checked ~ #demo, #user:checked ~ #demo2
+  display: flex !important
+
+
+/*About me end*/ 
+
+/*Skills start*/ 
+
+/*Skills end*/
+
+/*Portfolio start*/ 
+
+/*Portfolio end*/
+
+/*Contacts start*/ 
+
+.contacts
+  background-color: green
+
+/*Contacts end*/
+  
+  
+.indicators
+  position: fixed
+  top: 50vh
+  right: 20px
+  transform: translate(-50%, -50%)
+  z-index: 10
+  .indicator
+    width: 10px
+    height: 10px
+    border: 1px solid #F25F29
+    margin-bottom: 10px
+    display: block
+    cursor: pointer
+  .activeInd
+    background-color: #F25F29
+
+#static
+  /*этого дива нет* <div id='static'</div>*/
+  background-color: #00fff9
+  width: 100vw
+  height: 100vw
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1
+  
+@import "_footer"

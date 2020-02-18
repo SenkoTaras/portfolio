@@ -1,0 +1,70 @@
+doctype html
+html(lang="ru")
+    include ../includes/_head
+    body
+        <!-- header start -->
+        include ../includes/_header
+        <!-- header end -->
+        
+        
+        main
+            <!-- Home start -->
+            section#home.home
+                div.container
+                    div.home_wrapper
+                        div.home_info
+                            h1 Taras Senko
+                            div.home_info_bio
+                                p junior Front-End Developer 
+                                p 20 years old, Zhytomyr
+                            div.home_info_lang
+                                a(href='#').lang_link.active ENG
+                                a(href='#').lang_link RU
+                        div.home_img
+                            img(src='/img/photo_1.png')
+
+            <!-- Home end -->
+
+            <!-- about start -->
+            section#about.about
+                div.container
+                    div.about_wrapper
+                        h2 About me
+
+
+                        div.about_cv
+                            input#user(type='radio', name='my_cv', value='2')
+                            label(for='user') user
+                            input#recruiter(type='radio', name='my_cv', value='1', checked='')
+                            label(for='recruiter') recruiter
+                            a#demo(href='https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468') Download CV
+                            a#demo2(href='https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468') Download price
+
+
+
+            <!-- about end -->
+
+            <!-- skills start -->
+            section#skills.skills
+                div.container
+
+
+            <!-- skills end -->
+
+            <!-- Portfolio start -->
+            section#portfolio.portfolio
+                div.container
+
+
+            <!-- Portfolio end -->
+
+            <!-- contacts start -->
+            section#contacts.contacts
+                div.container
+
+
+            <!-- contacts end -->
+
+
+        
+        include ../includes/_scripts
