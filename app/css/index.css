@@ -32,6 +32,10 @@ h2 {
   font-size: 1.8rem; }
 
 h3 {
+  font-size: 1.4rem;
+  font-family: 'font_tittle',sans-serif; }
+
+h4 {
   font-size: .8rem;
   font-family: 'font_link',sans-serif; }
 
@@ -63,6 +67,48 @@ ul li {
 @font-face {
   font-family: "font_tittle";
   src: url("../fonts/gilroy/gilroy-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/gilroy-bold.woff") format("woff"), url("../fonts/gilroy/gilroy-bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "icon-site";
+  src: url("../fonts/icon/icon-site.eot?#iefix") format("embedded-opentype"), url("../fonts/icon/icon-site.woff2") format("woff2"), url("../fonts/icon/icon-site.woff") format("woff"), url("../fonts/icon/icon-site.ttf") format("truetype"), url("../fonts/icon/icon-site.svg#icon-site") format("svg"); }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icon-site" !important;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-github-circled:before {
+  content: '\e800'; }
+
+.icon-linkedin-circled:before {
+  content: '\e801'; }
+
+.icon-gmail:before {
+  content: '\e802'; }
+
+.icon-left-circled:before {
+  content: '\f0a8'; }
+
+.icon-right-circled:before {
+  content: '\f0a9'; }
+
+.icon-instagram:before {
+  content: '\f16d'; }
+
+.icon-telegram:before {
+  content: '\f2c6'; }
 
 /*Header start*/
 .section_header {
@@ -250,7 +296,7 @@ section {
 .about {
   background-color: #F6F6F6; }
 
-.about_wrapper {
+.about_me {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -263,8 +309,15 @@ section {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-top: 5rem; }
-  .about_wrapper h2 {
+  margin-top: 5rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+  .about_me h2 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -276,7 +329,125 @@ section {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    margin-bottom: 2rem; }
+  .about_me .about_me_wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 70vh; }
+    .about_me .about_me_wrapper .about_me_photo {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      max-height: 70vh;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 35%;
+          -ms-flex: 0 0 35%;
+              flex: 0 0 35%;
+      overflow: hidden;
+      margin: 10px; }
+      .about_me .about_me_wrapper .about_me_photo img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: 0 0;
+           object-position: 0 0; }
+    .about_me .about_me_wrapper .about_me_info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: 100%;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1;
+          -ms-flex: 1 1;
+              flex: 1 1;
+      max-width: 500px;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      margin: 10px; }
+      .about_me .about_me_wrapper .about_me_info .about_cv {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        max-width: 500px;
+        width: 100%; }
+        .about_me .about_me_wrapper .about_me_info .about_cv .about_cv_click input {
+          display: none; }
+        .about_me .about_me_wrapper .about_me_info .about_cv .about_cv_click label {
+          cursor: pointer; }
+        .about_me .about_me_wrapper .about_me_info .about_cv .about_cv_click a {
+          padding: .7rem 1rem;
+          margin-top: 1rem;
+          cursor: pointer;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          text-decoration: none;
+          border: 1px solid #828282;
+          border-radius: 15px;
+          color: #828282;
+          -webkit-transition: .3s ease-in-out;
+          -o-transition: .3s ease-in-out;
+          transition: .3s ease-in-out; }
+          .about_me .about_me_wrapper .about_me_info .about_cv .about_cv_click a:hover {
+            color: black;
+            border: 1px solid black;
+            background-color: #828282;
+            -webkit-transition: .3s ease-in-out;
+            -o-transition: .3s ease-in-out;
+            transition: .3s ease-in-out; }
 
 #demo, #demo2 {
   display: none; }
@@ -288,10 +459,284 @@ section {
   display: flex !important; }
 
 /*About me end*/
-/*Skills start*/
-/*Skills end*/
 /*Portfolio start*/
+.portfolio_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  position: relative;
+  height: 100%; }
+  .portfolio_wrapper .owl-carousel {
+    width: 100%;
+    height: 70vh; }
+    .portfolio_wrapper .owl-carousel .item {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .portfolio_wrapper .owl-carousel .item .portfolio_link {
+        width: 100%;
+        height: 100%; }
+        .portfolio_wrapper .owl-carousel .item .portfolio_link .portfolio_image {
+          max-height: 75vh;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center; }
+          .portfolio_wrapper .owl-carousel .item .portfolio_link .portfolio_image img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+            -o-object-position: 0 0;
+               object-position: 0 0; }
+        .portfolio_wrapper .owl-carousel .item .portfolio_link .portfolio_item {
+          position: absolute;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          z-index: 10;
+          width: 80%;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: 0 auto;
+          color: white;
+          opacity: 0;
+          -webkit-transition: all .5s ease-in-out;
+          -o-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out; }
+          .portfolio_wrapper .owl-carousel .item .portfolio_link .portfolio_item h3 {
+            margin: .7rem; }
+        .portfolio_wrapper .owl-carousel .item .portfolio_link:hover .portfolio_item {
+          opacity: .8;
+          -webkit-transition: all .5s ease-in-out;
+          -o-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out; }
+    .portfolio_wrapper .owl-carousel .owl-nav {
+      position: absolute;
+      top: 49%;
+      width: 95%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .portfolio_wrapper .owl-carousel .owl-nav button {
+        color: white !important;
+        opacity: .5;
+        -webkit-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        position: relative; }
+        .portfolio_wrapper .owl-carousel .owl-nav button span {
+          position: relative;
+          top: 2px;
+          font-size: 40px;
+          -webkit-transition: all .4s ease-in-out;
+          -o-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out; }
+        .portfolio_wrapper .owl-carousel .owl-nav button:hover {
+          opacity: 1;
+          -webkit-transition: all .4s ease-in-out;
+          -o-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out; }
+  .portfolio_wrapper .portfolio_button {
+    padding: .7rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-decoration: none;
+    border: 1px solid #828282;
+    border-radius: 15px;
+    color: #828282;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out; }
+    .portfolio_wrapper .portfolio_button:hover {
+      color: black;
+      border: 1px solid black;
+      background-color: #828282;
+      -webkit-transition: .3s ease-in-out;
+      -o-transition: .3s ease-in-out;
+      transition: .3s ease-in-out; }
+
 /*Portfolio end*/
+/*Blog start*/
+.blog {
+  background-color: #F6F6F6; }
+  .blog .container .blog_wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-top: 5rem;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    min-height: 86vh; }
+    .blog .container .blog_wrapper .blog_list {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .blog .container .blog_wrapper .blog_list .single_blog {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 250px;
+            -ms-flex: 1 1 250px;
+                flex: 1 1 250px;
+        border: 2px solid black;
+        margin: 5px; }
+        .blog .container .blog_wrapper .blog_list .single_blog img {
+          width: 100%;
+          height: 100%;
+          max-height: 40vh;
+          -o-object-fit: cover;
+             object-fit: cover;
+          -o-object-position: 0 0;
+             object-position: 0 0; }
+        .blog .container .blog_wrapper .blog_list .single_blog h3, .blog .container .blog_wrapper .blog_list .single_blog p, .blog .container .blog_wrapper .blog_list .single_blog a {
+          padding: 5px; }
+        .blog .container .blog_wrapper .blog_list .single_blog a {
+          color: grey;
+          -webkit-transition: .3s ease-in-out;
+          -o-transition: .3s ease-in-out;
+          transition: .3s ease-in-out; }
+          .blog .container .blog_wrapper .blog_list .single_blog a:hover {
+            color: black;
+            -webkit-transition: .3s ease-in-out;
+            -o-transition: .3s ease-in-out;
+            transition: .3s ease-in-out; }
+    .blog .container .blog_wrapper .blog_button {
+      padding: .7rem 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      text-decoration: none;
+      border: 1px solid #828282;
+      border-radius: 15px;
+      color: #828282;
+      -webkit-transition: .3s ease-in-out;
+      -o-transition: .3s ease-in-out;
+      transition: .3s ease-in-out; }
+      .blog .container .blog_wrapper .blog_button:hover {
+        color: black;
+        border: 1px solid black;
+        background-color: #828282;
+        -webkit-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
+
+/*Blog end*/
 /*Contacts start*/
 .contacts {
   background-color: green; }

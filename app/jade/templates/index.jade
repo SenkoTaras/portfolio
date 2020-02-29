@@ -28,35 +28,80 @@ html(lang="ru")
             <!-- about start -->
             section#about.about
                 div.container
-                    div.about_wrapper
+                    div.about_me
                         h2 About me
-
-
-                        div.about_cv
-                            input#user(type='radio', name='my_cv', value='2')
-                            label(for='user') user
-                            input#recruiter(type='radio', name='my_cv', value='1', checked='')
-                            label(for='recruiter') recruiter
-                            a#demo(href='https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468') Download CV
-                            a#demo2(href='https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468') Download price
+                        div.about_me_wrapper
+                            div.about_me_photo
+                                img(src='/img/photo_1.png')
+                            div.about_me_info
+                                p Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.
+                                p I'm studying at courses "Web and mobile design interfaces" in IT-Academy
+                                p Ready to implement excellent projects with wonderful people.
+                                div.about_cv
+                                    div.about_cv_click
+                                        input#user(type='radio', name='my_cv', value='2')
+                                        label(for='user') Click me if you need project
+                                        a#demo2(href='https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468') Download price
+                                    div.about_cv_click
+                                        input#recruiter(type='radio', name='my_cv', value='1', checked='')
+                                        label(for='recruiter') Click me if you recruiter
+                                        a#demo(href='https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468') Download CV
+                                
 
 
 
             <!-- about end -->
 
-            <!-- skills start -->
-            section#skills.skills
-                div.container
-
-
-            <!-- skills end -->
 
             <!-- Portfolio start -->
             section#portfolio.portfolio
-                div.container
-
+                div.portfolio_wrapper
+                    h2 Portfolio
+                    div.owl-carousel
+                        div.item
+                            a.portfolio_link(href="#")
+                                img.portfolio_image(src='/img/photo_1.png')
+                                div.portfolio_item
+                                    h3 Name work
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum impedit temporibus porro incidunt minima rerum dolorem voluptatem consequatur laudantium quae nulla, expedita veniam accusamus natus quod iure repudiandae architecto.
+                        div.item
+                            a.portfolio_link(href="#")
+                                img.portfolio_image(src='/img/photo_1.png')
+                                div.portfolio_item
+                                    h3 Name work
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum impedit temporibus porro incidunt minima rerum dolorem voluptatem consequatur laudantium quae nulla, expedita veniam accusamus natus quod iure repudiandae architecto.
+                        div.item
+                            a.portfolio_link(href="#")
+                                img.portfolio_image(src='/img/photo_1.png')
+                                div.portfolio_item
+                                    h3 Name work
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum impedit temporibus porro incidunt minima rerum dolorem voluptatem consequatur laudantium quae nulla, expedita veniam accusamus natus quod iure repudiandae architecto.
+                    a.portfolio_button(href="#") Посмотреть все работы
 
             <!-- Portfolio end -->
+
+
+            <!-- blog start -->
+
+            section#blog.blog
+                div.container
+                    div.blog_wrapper
+                        h2 Blog
+                        div.blog_list
+                            div.single_blog
+                                img(src="/img/photo_1.png")
+                                h3 blog 1
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum omnis delectus modi totam maxime? Neque nihil, est id...
+                                a(href="") read more
+                            div.single_blog
+                                img(src="/img/photo_1.png")
+                                h3 blog 1
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum omnis delectus modi totam maxime? Neque nihil, est id...
+                                a(href="") read more
+                            
+                        a.blog_button(href="") Читать больше записей
+
+            <!-- blog end -->
 
             <!-- contacts start -->
             section#contacts.contacts

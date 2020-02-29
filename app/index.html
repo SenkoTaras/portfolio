@@ -7,11 +7,13 @@
     <link rel="stylesheet" type="text/css" href="css/libs.min.css">
     <link link rel="stylesheet" type="text/css" href="css/index.css">
     <link link rel="stylesheet" type="text/css" href="css/onepage-scroll.css">
+    <link link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
   </head>
   <body><!-- header start -->
     <header class="section_header">
       <div class="container">
-        <nav class="header_wrapper"><a data-index="1" href="#1" class="nav_link">Home</a><a data-index="2" href="#2" class="nav_link">About me</a><a href="#3" data-index="3" class="nav_link">Skills</a><a href="#4" data-index="4" class="nav_link">Portfolio</a><a href="#5" data-index="5" class="nav_link">Contacts</a></nav>
+        <nav class="header_wrapper"><a data-index="1" href="#1" class="nav_link">Home</a><a data-index="2" href="#2" class="nav_link">About me</a><a href="#3" data-index="3" class="nav_link">Portfolio</a><a href="#4" data-index="4" class="nav_link">Blog</a><a href="#5" data-index="5" class="nav_link">Contacts</a></nav>
       </div>
     </header><!-- header end -->
     <main><!-- Home start -->
@@ -33,25 +35,70 @@
       <!-- about start -->
       <section id="about" class="about">
         <div class="container">
-          <div class="about_wrapper">
+          <div class="about_me">
             <h2>About me</h2>
-            <div class="about_cv">
-              <input id="user" type="radio" name="my_cv" value="2">
-              <label for="user">user</label>
-              <input id="recruiter" type="radio" name="my_cv" value="1" checked="">
-              <label for="recruiter">recruiter</label><a id="demo" href="https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468">Download CV</a><a id="demo2" href="https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468">Download price</a>
+            <div class="about_me_wrapper">
+              <div class="about_me_photo"><img src="/img/photo_1.png"></div>
+              <div class="about_me_info">
+                <p>Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.</p>
+                <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy</p>
+                <p>Ready to implement excellent projects with wonderful people.</p>
+                <div class="about_cv">
+                  <div class="about_cv_click">
+                    <input id="user" type="radio" name="my_cv" value="2">
+                    <label for="user">Click me if you need project</label><a id="demo2" href="https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468">Download price</a>
+                  </div>
+                  <div class="about_cv_click">
+                    <input id="recruiter" type="radio" name="my_cv" value="1" checked="">
+                    <label for="recruiter">Click me if you recruiter</label><a id="demo" href="https://account.rabota.ua/jobsearch/cvbuilder?resumeId=12376468">Download CV</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section><!-- about end -->
-      <!-- skills start -->
-      <section id="skills" class="skills">
-        <div class="container"></div>
-      </section><!-- skills end -->
       <!-- Portfolio start -->
       <section id="portfolio" class="portfolio">
-        <div class="container"></div>
+        <div class="portfolio_wrapper">
+          <h2>Portfolio</h2>
+          <div class="owl-carousel">
+            <div class="item"><a href="#" class="portfolio_link"><img src="/img/photo_1.png" class="portfolio_image">
+                <div class="portfolio_item">
+                  <h3>Name work</h3>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum impedit temporibus porro incidunt minima rerum dolorem voluptatem consequatur laudantium quae nulla, expedita veniam accusamus natus quod iure repudiandae architecto.</p>
+                </div></a></div>
+            <div class="item"><a href="#" class="portfolio_link"><img src="/img/photo_1.png" class="portfolio_image">
+                <div class="portfolio_item">
+                  <h3>Name work</h3>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum impedit temporibus porro incidunt minima rerum dolorem voluptatem consequatur laudantium quae nulla, expedita veniam accusamus natus quod iure repudiandae architecto.</p>
+                </div></a></div>
+            <div class="item"><a href="#" class="portfolio_link"><img src="/img/photo_1.png" class="portfolio_image">
+                <div class="portfolio_item">
+                  <h3>Name work</h3>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum impedit temporibus porro incidunt minima rerum dolorem voluptatem consequatur laudantium quae nulla, expedita veniam accusamus natus quod iure repudiandae architecto.</p>
+                </div></a></div>
+          </div><a href="#" class="portfolio_button">Посмотреть все работы</a>
+        </div>
       </section><!-- Portfolio end -->
+      <!-- blog start -->
+      <section id="blog" class="blog">
+        <div class="container">
+          <div class="blog_wrapper">
+            <h2>Blog</h2>
+            <div class="blog_list">
+              <div class="single_blog"><img src="/img/photo_1.png">
+                <h3>blog 1</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum omnis delectus modi totam maxime? Neque nihil, est id...</p><a href="">read more</a>
+              </div>
+              <div class="single_blog"><img src="/img/photo_1.png">
+                <h3>blog 1</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum omnis delectus modi totam maxime? Neque nihil, est id...</p><a href="">read more</a>
+              </div>
+            </div><a href="" class="blog_button">Читать больше записей</a>
+          </div>
+        </div>
+      </section><!-- blog end -->
       <!-- contacts start -->
       <section id="contacts" class="contacts">
         <div class="container"></div>
@@ -59,7 +106,8 @@
     </main>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/libs.min.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
   </body>
 </html>
