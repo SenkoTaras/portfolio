@@ -13,11 +13,11 @@
   <body><!-- header start -->
     <header class="section_header">
       <div class="container">
-        <nav class="header_wrapper"><a data-index="1" href="#1" class="nav_link">Home</a><a data-index="2" href="#2" class="nav_link">About me</a><a href="#3" data-index="3" class="nav_link">Portfolio</a><a href="#4" data-index="4" class="nav_link">Blog</a><a href="#5" data-index="5" class="nav_link">Contacts</a></nav>
+        <nav class="header_wrapper"><a data-index="1" class="nav_link">Home</a><a data-index="2" class="nav_link">About me</a><a data-index="3" class="nav_link">Portfolio</a><a data-index="4" class="nav_link">Blog</a><a data-index="5" class="nav_link">Contacts</a></nav>
       </div>
     </header><!-- header end -->
     <main><!-- Home start -->
-      <section id="home" class="home">
+      <section data-index="1" id="home" class="home">
         <div class="container">
           <div class="home_wrapper">
             <div class="home_info">
@@ -33,7 +33,7 @@
         </div>
       </section><!-- Home end -->
       <!-- about start -->
-      <section id="about" class="about">
+      <section data-index="2" id="about" class="about">
         <div class="container">
           <div class="about_me">
             <h2>About me</h2>
@@ -101,7 +101,15 @@
       </section><!-- blog end -->
       <!-- contacts start -->
       <section id="contacts" class="contacts">
-        <div class="container"></div>
+        <div class="container">
+          <div class="contact_wrapper">
+            <h2>Contacts</h2>
+            <p>Want to know more or just chat? You are welcome!</p>
+            <button>Send Message</button>
+            <div class="social_wrapper"><a href="" class="icon-github-circled"></a><a href="" class="icon-linkedin-circled"></a><a href="" class="icon-gmail"></a><a href="" class="icon-instagram"></a><a href="" class="icon-telegram"></a></div>
+            <h4>Site build Taras Senko</h4>
+          </div>
+        </div>
       </section><!-- contacts end -->
     </main>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>

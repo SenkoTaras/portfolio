@@ -329,37 +329,54 @@ section
 /*Blog end*/
 
 /*Contacts start*/ 
-
 .contacts
-  background-color: green
+  display: flex
+  align-items: center
+  justify-content: center
+.contact_wrapper
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  min-height: 40vh
+  button
+    padding: .7rem 1rem
+    margin-top: 1rem
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    border: 1px solid $black
+    border-radius: 25px
+    color: $black
+    transition: .3s ease-in-out
+    font-size: 1.3rem
+    &:hover
+      color: $white
+      border: 1px solid $black
+      background-color: $black
+      transition: .3s ease-in-out
+  .social_wrapper
+    display: flex
+    min-width: 20vw
+    align-items: center
+    justify-content: space-between
+    a
+      color: $black
+      opacity: .5
+      cursor: pointer
+      font-size: 25px
+      transition: .3s ease-in-out
+      &:hover
+        opacity: 1
+        transition: .3s ease-in-out
+
 
 /*Contacts end*/
   
   
-.indicators
-  position: fixed
-  top: 50vh
-  right: 20px
-  transform: translate(-50%, -50%)
-  z-index: 10
-  .indicator
-    width: 10px
-    height: 10px
-    border: 1px solid #F25F29
-    margin-bottom: 10px
-    display: block
-    cursor: pointer
-  .activeInd
-    background-color: #F25F29
 
-#static
-  /*этого дива нет* <div id='static'</div>*/
-  background-color: #00fff9
-  width: 100vw
-  height: 100vw
-  position: fixed
-  top: 0
-  left: 0
-  z-index: 1
   
 @import "_footer"

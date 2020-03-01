@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *, :before, :after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -51,6 +50,11 @@ a {
 
 ul li {
   list-style-type: none; }
+
+main {
+  float: left;
+  width: 100%;
+  margin: 0 auto; }
 
 @font-face {
   font-family: "font_text";
@@ -739,37 +743,101 @@ section {
 /*Blog end*/
 /*Contacts start*/
 .contacts {
-  background-color: green; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.contact_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 40vh; }
+  .contact_wrapper button {
+    padding: .7rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: black;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    font-size: 1.3rem; }
+    .contact_wrapper button:hover {
+      color: white;
+      border: 1px solid black;
+      background-color: black;
+      -webkit-transition: .3s ease-in-out;
+      -o-transition: .3s ease-in-out;
+      transition: .3s ease-in-out; }
+  .contact_wrapper .social_wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 20vw;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .contact_wrapper .social_wrapper a {
+      color: black;
+      opacity: .5;
+      cursor: pointer;
+      font-size: 25px;
+      -webkit-transition: .3s ease-in-out;
+      -o-transition: .3s ease-in-out;
+      transition: .3s ease-in-out; }
+      .contact_wrapper .social_wrapper a:hover {
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
 
 /*Contacts end*/
-.indicators {
-  position: fixed;
-  top: 50vh;
-  right: 20px;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 10; }
-  .indicators .indicator {
-    width: 10px;
-    height: 10px;
-    border: 1px solid #F25F29;
-    margin-bottom: 10px;
-    display: block;
-    cursor: pointer; }
-  .indicators .activeInd {
-    background-color: #F25F29; }
-
-#static {
-  /*этого дива нет* <div id='static'</div>*/
-  background-color: #00fff9;
-  width: 100vw;
-  height: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1; }
-
 /*Footer start*/
 .footer {
   padding: 2.5rem 0 1.25rem;
