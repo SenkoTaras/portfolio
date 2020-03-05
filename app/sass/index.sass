@@ -13,19 +13,25 @@
 
 
 main
-  width: 100vw
-  height: 100vh
-  position: relative
-  top: 0px
-  left: 0px
-  z-index: 2
-  transition: 1.2s ease
+  scroll-behavior: smooth
+  @media only screen and (min-width: 400px)
+    width: 100vw !important
+    height: 100vh !important
+    position: relative !important
+    top: 0px
+    left: 0px
+    z-index: 2
+    transition: 1.2s ease
+    scroll-behavior: auto
+
+
 
 section
   width: 100vw
-  min-height: 100vh
   z-index: 3
   position: relative
+  min-height: 100vh
+  scroll-behavior: smooth
 
 
 /*Home start*/ 
@@ -85,6 +91,9 @@ section
 
 .about
   background-color: #F6F6F6
+  @media only screen and (max-width: 401px)
+    margin: 2rem 0
+    padding: 2rem 0
     
 .about_me
   display: flex
@@ -93,6 +102,8 @@ section
   margin-top: 5rem
   align-items: center
   justify-content: space-around
+  @media only screen and (max-width: 401px)
+    margin-top: 0
   h2
     display: flex
     align-items: center
@@ -104,6 +115,9 @@ section
     align-items: center
     justify-content: space-between
     height: 70vh
+    @media only screen and (max-width: 401px)
+      height: 100%
+      flex-direction: column;
     .about_me_photo
       display: flex
       align-items: center
@@ -137,6 +151,11 @@ section
             display: none
           label
             cursor: pointer
+            border-bottom: 1px solid rgba(0, 0, 0, 0)
+            transition: .3s ease-in-out
+            &:hover
+              border-bottom: 1px solid rgba(0, 0, 0, 1)
+              transition: .3s ease-in-out
           a
             padding: .7rem 1rem
             margin-top: 1rem
@@ -179,9 +198,17 @@ section
   justify-content: space-around
   position: relative
   height: 100%
+  @media only screen and (max-width: 401px)
+    padding-top: 2rem
+    min-height: 100vh
+    justify-content: space-between
+    margin-bottom: 1rem
   .owl-carousel
     width: 100%
     height: 70vh
+    @media only screen and (max-width: 401px)
+      height: 100%
+      margin: 1rem 0
     .item
       width: 100%
       height: 100%
@@ -219,6 +246,9 @@ section
           color: $white
           opacity: 0
           transition: all .5s ease-in-out
+          @media only screen and (max-width: 401px)
+            opacity: 1
+            padding: 1.5rem
           h3
             margin: .7rem
         &:hover .portfolio_item
@@ -271,6 +301,8 @@ section
 
 .blog
   background-color: #F6F6F6
+  @media only screen and (max-width: 401px)
+    padding: 2rem 0
   .container
     .blog_wrapper
       display: flex
@@ -280,17 +312,23 @@ section
       align-items: center
       justify-content: space-around
       min-height: 86vh
+      @media only screen and (max-width: 401px)
+        margin-top: 0
       .blog_list
         display: flex
         align-items: center
         justify-content: space-between
         flex-wrap: wrap
+        @media only screen and (max-width: 401px)
+            margin: 12px 5px
         .single_blog
           display: flex
           flex-direction: column
           flex: 1 1 250px
           border: 2px solid $black
           margin: 5px
+          @media only screen and (max-width: 401px)
+            margin: 5px 0
           img
             width: 100%
             height: 100%
@@ -340,6 +378,10 @@ section
   align-items: center
   justify-content: space-between
   min-height: 40vh
+  @media only screen and (max-width: 401px)
+    min-height: 50vh
+  p
+    text-align: center
   button
     padding: .7rem 1rem
     margin-top: 1rem

@@ -7,7 +7,8 @@ body {
   font-size: 18px;
   margin: 0 auto;
   line-height: 1.875rem;
-  font-family: 'font_text',sans-serif; }
+  font-family: 'font_text',sans-serif;
+  scroll-behavior: smooth; }
 
 img {
   max-width: 100%;
@@ -54,7 +55,8 @@ ul li {
 main {
   float: left;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  scroll-behavior: smooth; }
 
 @font-face {
   font-family: "font_text";
@@ -166,21 +168,26 @@ main {
   padding-right: 10px; }
 
 main {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  z-index: 2;
-  -webkit-transition: 1.2s ease;
-  -o-transition: 1.2s ease;
-  transition: 1.2s ease; }
+  scroll-behavior: smooth; }
+  @media only screen and (min-width: 400px) {
+    main {
+      width: 100vw !important;
+      height: 100vh !important;
+      position: relative !important;
+      top: 0px;
+      left: 0px;
+      z-index: 2;
+      -webkit-transition: 1.2s ease;
+      -o-transition: 1.2s ease;
+      transition: 1.2s ease;
+      scroll-behavior: auto; } }
 
 section {
   width: 100vw;
-  min-height: 100vh;
   z-index: 3;
-  position: relative; }
+  position: relative;
+  min-height: 100vh;
+  scroll-behavior: smooth; }
 
 /*Home start*/
 .home_wrapper {
@@ -299,6 +306,10 @@ section {
 /*About me start*/
 .about {
   background-color: #F6F6F6; }
+  @media only screen and (max-width: 401px) {
+    .about {
+      margin: 2rem 0;
+      padding: 2rem 0; } }
 
 .about_me {
   display: -webkit-box;
@@ -321,6 +332,9 @@ section {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
+  @media only screen and (max-width: 401px) {
+    .about_me {
+      margin-top: 0; } }
   .about_me h2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -352,6 +366,14 @@ section {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 70vh; }
+    @media only screen and (max-width: 401px) {
+      .about_me .about_me_wrapper {
+        height: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
     .about_me .about_me_wrapper .about_me_photo {
       display: -webkit-box;
       display: -webkit-flex;
@@ -421,7 +443,16 @@ section {
         .about_me .about_me_wrapper .about_me_info .about_cv .about_cv_click input {
           display: none; }
         .about_me .about_me_wrapper .about_me_info .about_cv .about_cv_click label {
-          cursor: pointer; }
+          cursor: pointer;
+          border-bottom: 1px solid rgba(0, 0, 0, 0);
+          -webkit-transition: .3s ease-in-out;
+          -o-transition: .3s ease-in-out;
+          transition: .3s ease-in-out; }
+          .about_me .about_me_wrapper .about_me_info .about_cv .about_cv_click label:hover {
+            border-bottom: 1px solid black;
+            -webkit-transition: .3s ease-in-out;
+            -o-transition: .3s ease-in-out;
+            transition: .3s ease-in-out; }
         .about_me .about_me_wrapper .about_me_info .about_cv .about_cv_click a {
           padding: .7rem 1rem;
           margin-top: 1rem;
@@ -488,9 +519,22 @@ section {
           justify-content: space-around;
   position: relative;
   height: 100%; }
+  @media only screen and (max-width: 401px) {
+    .portfolio_wrapper {
+      padding-top: 2rem;
+      min-height: 100vh;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-bottom: 1rem; } }
   .portfolio_wrapper .owl-carousel {
     width: 100%;
     height: 70vh; }
+    @media only screen and (max-width: 401px) {
+      .portfolio_wrapper .owl-carousel {
+        height: 100%;
+        margin: 1rem 0; } }
     .portfolio_wrapper .owl-carousel .item {
       width: 100%;
       height: 100%;
@@ -559,6 +603,10 @@ section {
           -webkit-transition: all .5s ease-in-out;
           -o-transition: all .5s ease-in-out;
           transition: all .5s ease-in-out; }
+          @media only screen and (max-width: 401px) {
+            .portfolio_wrapper .owl-carousel .item .portfolio_link .portfolio_item {
+              opacity: 1;
+              padding: 1.5rem; } }
           .portfolio_wrapper .owl-carousel .item .portfolio_link .portfolio_item h3 {
             margin: .7rem; }
         .portfolio_wrapper .owl-carousel .item .portfolio_link:hover .portfolio_item {
@@ -635,6 +683,9 @@ section {
 /*Blog start*/
 .blog {
   background-color: #F6F6F6; }
+  @media only screen and (max-width: 401px) {
+    .blog {
+      padding: 2rem 0; } }
   .blog .container .blog_wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -657,6 +708,9 @@ section {
         -ms-flex-pack: distribute;
             justify-content: space-around;
     min-height: 86vh; }
+    @media only screen and (max-width: 401px) {
+      .blog .container .blog_wrapper {
+        margin-top: 0; } }
     .blog .container .blog_wrapper .blog_list {
       display: -webkit-box;
       display: -webkit-flex;
@@ -673,6 +727,9 @@ section {
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; }
+      @media only screen and (max-width: 401px) {
+        .blog .container .blog_wrapper .blog_list {
+          margin: 12px 5px; } }
       .blog .container .blog_wrapper .blog_list .single_blog {
         display: -webkit-box;
         display: -webkit-flex;
@@ -689,6 +746,9 @@ section {
                 flex: 1 1 250px;
         border: 2px solid black;
         margin: 5px; }
+        @media only screen and (max-width: 401px) {
+          .blog .container .blog_wrapper .blog_list .single_blog {
+            margin: 5px 0; } }
         .blog .container .blog_wrapper .blog_list .single_blog img {
           width: 100%;
           height: 100%;
@@ -778,6 +838,11 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 40vh; }
+  @media only screen and (max-width: 401px) {
+    .contact_wrapper {
+      min-height: 50vh; } }
+  .contact_wrapper p {
+    text-align: center; }
   .contact_wrapper button {
     padding: .7rem 1rem;
     margin-top: 1rem;
